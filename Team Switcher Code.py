@@ -1,14 +1,11 @@
 #global variables
-global team
+global team # This variable will be accesased in your "autonomous()" function to tell what team the robot is on 
 team = ""
 
-# Begin project code
-
 def pre_autonomous():
-    global team
-    # actions to do when the program starts
+    global team # Make this global in your "autonomous()" funtion too 
     brain.screen.clear_screen()
-    brain.screen.print("pre auton code")
+    brain.screen.print("pre auton code") # This is not nessasary but handy 
     controller_1.screen.clear_screen()
     controller_1.screen.set_cursor(1,1)
     controller_1.screen.print("Team: None")
@@ -25,4 +22,4 @@ def pre_autonomous():
                 controller_1.screen.clear_screen()
                 controller_1.screen.set_cursor(1,1)
                 controller_1.screen.print("Selected: " + team) 
-                wait(0.5,SECONDS)  
+                wait(0.5,SECONDS) 
